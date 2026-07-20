@@ -36,7 +36,7 @@ export function ThanksGallery() {
             className="text-left cursor-pointer"
           >
             <Card className="card-hover overflow-hidden h-full">
-              <div className="relative h-56 sm:h-64">
+              <div className="relative aspect-[3/4]">
                 <Image
                   src={letter.imageSrc}
                   alt={`Благодарственное письмо от ${letter.from}`}

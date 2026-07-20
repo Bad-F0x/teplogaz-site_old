@@ -145,6 +145,14 @@ export const team: TeamMember[] = [
         id: "boldyrev-06",
         imageSrc: "/images/certificates/boldyrev-06.jpg",
       },
+      {
+        id: "boldyrev-proxy-01",
+        imageSrc: "/images/certificates/boldyrev-proxy-01.jpg",
+      },
+      {
+        id: "boldyrev-proxy-02",
+        imageSrc: "/images/certificates/boldyrev-proxy-02.jpg",
+      },
     ],
   },
   {
