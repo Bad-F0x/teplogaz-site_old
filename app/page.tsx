@@ -13,19 +13,21 @@ export default function HomePage() {
         id="hero"
         className="relative min-h-[calc(100vh-3.5rem)] flex items-center justify-center overflow-hidden"
       >
-        <div className="absolute inset-0 gradient-hero-vibrant pattern-grid opacity-50" />
+        <div className="absolute inset-0 gradient-hero-vibrant" />
+        <div className="absolute inset-0 pattern-gas" />
         <div className="relative z-10 max-w-2xl mx-auto px-4 text-center space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
-          <div className="flex flex-col sm:flex-row items-center sm:items-end justify-center gap-3 sm:gap-4">
+          <div className="flex flex-col sm:flex-row items-center sm:items-end justify-center gap-1 sm:gap-2">
             <Image
               src="/logo.png"
               alt={company.name}
-              width={120}
-              height={120}
-              className="h-auto w-auto max-h-28 sm:max-h-36"
+              width={200}
+              height={200}
+              className="h-auto w-auto max-h-48"
               priority
             />
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-              {company.name}
+              <span className="block">ООО Проектная контора</span>
+              <span className="block">«ТЕПЛОГАЗ»</span>
             </h1>
           </div>
           <div className="space-y-4">

@@ -121,16 +121,37 @@
 
 @layer utilities {
   .gradient-hero {
-    background: linear-gradient(135deg, oklch(0.55 0.18 264) 0%, oklch(0.45 0.2 290) 50%, oklch(0.5 0.15 320) 100%);
+    background: linear-gradient(
+      135deg,
+      oklch(0.55 0.18 264) 0%,
+      oklch(0.45 0.2 290) 50%,
+      oklch(0.5 0.15 320) 100%
+    );
   }
   .gradient-hero-light {
-    background: linear-gradient(135deg, oklch(0.97 0.03 264) 0%, oklch(0.94 0.04 280) 30%, oklch(0.92 0.05 300) 60%, oklch(0.95 0.03 270) 100%);
+    background: linear-gradient(
+      135deg,
+      oklch(0.97 0.03 264) 0%,
+      oklch(0.94 0.04 280) 30%,
+      oklch(0.92 0.05 300) 60%,
+      oklch(0.95 0.03 270) 100%
+    );
   }
   .gradient-hero-vibrant {
-    background: linear-gradient(135deg, #e0e7ff 0%, #ddd6fe 30%, #fce7f3 60%, #fae8ff 100%);
+    background: linear-gradient(
+      180deg,
+      #3b82f6 0%,
+      #60a5fa 30%,
+      #93c5fd 60%,
+      transparent 100%
+    );
   }
   .gradient-card {
-    background: linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.9) 100%);
+    background: linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(248, 250, 252, 0.9) 100%
+    );
   }
   .pattern-grid {
     background-image: radial-gradient(circle, #cbd5e1 1px, transparent 1px);
@@ -140,14 +161,26 @@
     animation: pulse-dot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
   @keyframes pulse-dot {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
   }
   .card-hover {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
   }
   .card-hover:hover {
     transform: translateY(-2px);
     box-shadow: 0 12px 24px -8px oklch(0.2 0.05 270 / 0.15);
+  }
+  .pattern-gas {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Cdefs%3E%3Cg id='flame'%3E%3Cpath d='M0,-35 C14,-22 12,-4 0,2 C-12,-4 -14,-22 0,-35Z' fill='none' stroke='%233B82F6' stroke-width='1.5'/%3E%3Cpath d='M0,-28 C8,-17 7,-4 0,0 C-7,-4 -8,-17 0,-28Z' fill='none' stroke='%23F97316' stroke-width='1'/%3E%3C/g%3E%3Cg id='burner'%3E%3Ccircle cx='0' cy='0' r='28' fill='none' stroke='%233B82F6' stroke-width='1.5'/%3E%3Ccircle cx='0' cy='0' r='24' fill='none' stroke='%233B82F6' stroke-width='0.5' stroke-dasharray='2,3'/%3E%3Cuse href='%23flame' transform='rotate(0) translate(0,-30)'/%3E%3Cuse href='%23flame' transform='rotate(45) translate(0,-30)'/%3E%3Cuse href='%23flame' transform='rotate(90) translate(0,-30)'/%3E%3Cuse href='%23flame' transform='rotate(135) translate(0,-30)'/%3E%3Cuse href='%23flame' transform='rotate(180) translate(0,-30)'/%3E%3Cuse href='%23flame' transform='rotate(225) translate(0,-30)'/%3E%3Cuse href='%23flame' transform='rotate(270) translate(0,-30)'/%3E%3Cuse href='%23flame' transform='rotate(315) translate(0,-30)'/%3E%3C/g%3E%3C/defs%3E%3Cg opacity='0.12'%3E%3Cuse href='%23burner' transform='translate(100,100)'/%3E%3Cuse href='%23burner' transform='translate(300,300)'/%3E%3Cuse href='%23burner' transform='translate(-100,300)'/%3E%3Cuse href='%23burner' transform='translate(500,300)'/%3E%3Cuse href='%23burner' transform='translate(300,-100)'/%3E%3Cuse href='%23burner' transform='translate(300,500)'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 400px 400px;
   }
 }

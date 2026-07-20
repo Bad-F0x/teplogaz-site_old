@@ -68,13 +68,14 @@ export function ThanksGallery() {
               <span className="sr-only">Закрыть</span>
             </button>
 
-            <div className="relative w-full max-h-[85vh] aspect-[3/4]">
+            <div className="flex items-center justify-center">
               <Image
                 src={selected.imageSrc}
                 alt={`Благодарственное письмо от ${selected.from}`}
-                fill
-                className="object-contain"
+                width={0}
+                height={0}
                 sizes="90vw"
+                className="w-auto h-auto max-w-full max-h-[85vh] object-contain"
                 priority
               />
             </div>

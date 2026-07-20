@@ -14,6 +14,10 @@ const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 export const metadata: Metadata = {
   title: company.name,
   description: company.description,
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -29,16 +33,16 @@ export default function RootLayout({
           <div className="container mx-auto px-4 h-14 flex items-center justify-between">
             <Link
               href="/"
-              className="flex items-end gap-1 text-lg font-semibold tracking-tight"
+              className="flex items-end gap-0.5 text-lg font-semibold tracking-tight"
             >
               <Image
                 src="/logo.png"
                 alt="Логотип"
-                width={40}
-                height={40}
-                className="h-10 w-10 object-contain"
+                width={36}
+                height={36}
+                className="h-9 w-9 object-contain"
               />
-              {company.shortName}
+              Проектная контора «ТЕПЛОГАЗ»
             </Link>
             <nav className="flex items-center gap-6">
               {navItems.map((item) => (

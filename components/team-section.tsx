@@ -1,5 +1,5 @@
 import { team } from "@/lib/data";
-import { Card, CardContent } from "@/components/ui/card";
+import { TeamMemberCard } from "@/components/team-member-card";
 
 export function TeamSection() {
   return (
@@ -16,26 +16,7 @@ export function TeamSection() {
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 justify-center">
           {team.map((member) => (
-            <Card
-              key={member.name}
-              size="sm"
-              className="card-hover text-center"
-            >
-              <div className="flex justify-center pt-6">
-                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 text-lg font-semibold text-primary">
-                  {member.initials}
-                </div>
-              </div>
-              <CardContent className="space-y-2">
-                <h3 className="font-semibold text-foreground">{member.name}</h3>
-                <p className="text-sm font-medium text-primary">
-                  {member.position}
-                </p>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {member.description}
-                </p>
-              </CardContent>
-            </Card>
+            <TeamMemberCard key={member.name} member={member} />
           ))}
         </div>
       </div>

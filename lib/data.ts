@@ -96,11 +96,18 @@ export const aboutCompany = {
     "Наши сотрудники имеют аттестацию НОПРИЗ (Национальное объединение изыскателей и проектировщиков), что подтверждает их высокую квалификацию и соответствие профессиональным стандартам.",
 };
 
+export interface CertificatePage {
+  id: string;
+  imageSrc: string;
+}
+
 export interface TeamMember {
   name: string;
   position: string;
   description: string;
   initials: string;
+  imageSrc: string;
+  certificatePages?: CertificatePage[];
 }
 
 export const team: TeamMember[] = [
@@ -110,6 +117,17 @@ export const team: TeamMember[] = [
     description:
       "Специалист в сфере проектирования сооружений и эксплуатации газонефтепроводов и газонефтехранилищ.",
     initials: "ДК",
+    imageSrc: "/images/team/kalistratov.jpg",
+    certificatePages: [
+      {
+        id: "kalistratov-01",
+        imageSrc: "/images/certificates/kalistratov-01.jpg",
+      },
+      {
+        id: "kalistratov-06",
+        imageSrc: "/images/certificates/kalistratov-06.jpg",
+      },
+    ],
   },
   {
     name: "Болдырев Денис",
@@ -117,6 +135,17 @@ export const team: TeamMember[] = [
     description:
       "Имеет большой стаж работы в проектировании наружных и внутренних систем газоснабжения.",
     initials: "ДБ",
+    imageSrc: "/images/team/boldyrev.jpg",
+    certificatePages: [
+      {
+        id: "boldyrev-01",
+        imageSrc: "/images/certificates/boldyrev-01.jpg",
+      },
+      {
+        id: "boldyrev-06",
+        imageSrc: "/images/certificates/boldyrev-06.jpg",
+      },
+    ],
   },
   {
     name: "Медведев Михаил",
@@ -124,6 +153,7 @@ export const team: TeamMember[] = [
     description:
       "Работал в АО «Омскоблгаз» в отделе строительства и эксплуатации газораспределительных сетей. Имеет большой опыт в своей специализации.",
     initials: "ММ",
+    imageSrc: "/images/team/medvedev.jpg",
   },
 ];
 
@@ -158,5 +188,10 @@ export const gratitudeLetters: GratitudeLetter[] = [
     id: "thanks-5",
     from: "ООО «СеверГазМонтаж»",
     imageSrc: "/images/thanks/thanks-5.jpg",
+  },
+  {
+    id: "thanks-6",
+    from: "Благодарственное письмо",
+    imageSrc: "/images/thanks/thanks-6.jpg",
   },
 ];

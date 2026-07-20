@@ -132,76 +132,76 @@ export function ContactsSection() {
                 </div>
               </div>
             </div>
+          </div>
 
-            <div className="border-t pt-8">
-              <h3 className="text-lg font-semibold mb-1">Обратная связь</h3>
-              <p className="text-sm text-muted-foreground mb-5">
-                Оставьте заявку, и мы свяжемся с вами в ближайшее время
-              </p>
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">
-                    Имя <span className="text-destructive">*</span>
-                  </label>
-                  <Input
-                    value={name}
-                    onChange={handleNameChange}
-                    placeholder="Ваше имя"
-                    disabled={isLoading}
-                    required
-                    className="h-11"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">
-                    Телефон <span className="text-destructive">*</span>
-                  </label>
-                  <Input
-                    value={phone}
-                    onChange={handlePhoneChange}
-                    placeholder="+7 (XXX) XXX-XX-XX"
-                    disabled={isLoading}
-                    required
-                    className="h-11"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">
-                    Комментарий <span className="text-destructive">*</span>
-                  </label>
-                  <textarea
-                    value={comment}
-                    onChange={(e) => setComment(e.target.value)}
-                    placeholder="Опишите ваш вопрос или пожелание"
-                    disabled={isLoading}
-                    required
-                    className="flex min-h-[100px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 resize-y"
-                  />
-                </div>
-                <Button
-                  type="submit"
+          <div className="space-y-6">
+            <h3 className="text-lg font-semibold">Обратная связь</h3>
+            <p className="text-sm text-muted-foreground">
+              Оставьте заявку, и мы свяжемся с вами в ближайшее время
+            </p>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="space-y-2">
+                <label className="text-sm font-medium">
+                  Имя <span className="text-destructive">*</span>
+                </label>
+                <Input
+                  value={name}
+                  onChange={handleNameChange}
+                  placeholder="Ваше имя"
                   disabled={isLoading}
-                  className="h-11 px-6 w-full sm:w-auto"
-                >
-                  <Send className="h-4 w-4 mr-2" />
-                  {isLoading ? "Отправка..." : "Отправить"}
-                </Button>
-              </form>
-            </div>
+                  required
+                  className="h-11"
+                />
+              </div>
+              <div className="space-y-2">
+                <label className="text-sm font-medium">
+                  Телефон <span className="text-destructive">*</span>
+                </label>
+                <Input
+                  value={phone}
+                  onChange={handlePhoneChange}
+                  placeholder="+7 (XXX) XXX-XX-XX"
+                  disabled={isLoading}
+                  required
+                  className="h-11"
+                />
+              </div>
+              <div className="space-y-2">
+                <label className="text-sm font-medium">
+                  Комментарий <span className="text-destructive">*</span>
+                </label>
+                <textarea
+                  value={comment}
+                  onChange={(e) => setComment(e.target.value)}
+                  placeholder="Опишите ваш вопрос или пожелание"
+                  disabled={isLoading}
+                  required
+                  className="flex min-h-[100px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 resize-y"
+                />
+              </div>
+              <Button
+                type="submit"
+                disabled={isLoading}
+                className="h-11 px-6 w-full sm:w-auto"
+              >
+                <Send className="h-4 w-4 mr-2" />
+                {isLoading ? "Отправка..." : "Отправить"}
+              </Button>
+            </form>
           </div>
+        </div>
 
-          <div className="w-full rounded-xl overflow-hidden ring-1 ring-foreground/10">
-            <iframe
-              src={mapSrc}
-              width="100%"
-              height="360"
-              className="w-full"
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Карта — ООО ПК Теплогаз"
-            />
-          </div>
+        <div className="w-full rounded-xl overflow-hidden ring-1 ring-foreground/10">
+          <iframe
+            src={mapSrc}
+            width="100%"
+            height="360"
+            className="w-full"
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Карта — ООО ПК Теплогаз"
+          />
         </div>
       </div>
     </section>
