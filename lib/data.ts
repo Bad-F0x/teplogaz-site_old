@@ -121,11 +121,11 @@ export const team: TeamMember[] = [
     certificatePages: [
       {
         id: "kalistratov-01",
-        imageSrc: "/images/certificates/kalistratov-01.jpg",
+        imageSrc: "/images/certificates/kalistratov-cert-01.jpg",
       },
       {
         id: "kalistratov-06",
-        imageSrc: "/images/certificates/kalistratov-06.jpg",
+        imageSrc: "/images/certificates/kalistratov-cert-06.jpg",
       },
     ],
   },
@@ -139,11 +139,11 @@ export const team: TeamMember[] = [
     certificatePages: [
       {
         id: "boldyrev-01",
-        imageSrc: "/images/certificates/boldyrev-01.jpg",
+        imageSrc: "/images/certificates/boldyrev-cert-01.jpg",
       },
       {
         id: "boldyrev-06",
-        imageSrc: "/images/certificates/boldyrev-06.jpg",
+        imageSrc: "/images/certificates/boldyrev-cert-06.jpg",
       },
       {
         id: "boldyrev-proxy-01",
