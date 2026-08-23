@@ -3,6 +3,7 @@ import "./globals.css";
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { BridgeProvider } from "@/components/bridge-provider";
+import { YandexMetrica } from "@/components/yandex-metrica";
 import { Toaster } from "@/components/ui/sonner";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -108,6 +109,7 @@ export default function RootLayout({
           }}
         />
         <BridgeProvider />
+        <YandexMetrica />
         <SiteHeader />
         <main className="flex-1">{children}</main>
         <SiteFooter />
